@@ -1,0 +1,26 @@
+spring:
+  config:
+    activate:
+      on-profile:
+      - prod
+
+server:
+  port: 8080
+  
+management:
+  endpoint:
+    health:
+      probes:
+        enabled: true
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+      
+database:
+  username: prod
+  password: prod
+  server:
+    ip: 10.10.10.3
+    port: 1234
