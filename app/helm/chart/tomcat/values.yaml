@@ -249,7 +249,7 @@ ingress:
 ##     value: BAR
 ##
 extraEnvVars:
-  - name: TOMCAT_EXTRA_JAVA_OPTS
+  - name: JAVA_OPTS
     value: '-Dspring.profiles.active=qa'
 
 ## Liveness and Readiness probes
