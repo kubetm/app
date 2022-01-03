@@ -5,6 +5,8 @@ spring:
       - dev
 
 server:
+  servlet:
+    context-path: /app
   port: 8080
   
 management:
