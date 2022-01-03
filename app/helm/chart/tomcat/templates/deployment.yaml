@@ -17,9 +17,6 @@ spec:
       labels: {{- include "tomcat.labels" . | nindent 8 }}
     {{- if .Values.podAnnotations }}
     annotations: {{- toYaml .Values.podAnnotations | nindent 8 }}
-    {{- else }}
-    annotations: 
-      rollme: {{ randAlphaNum 5 | quote }}
     {{- end }}      
     spec:
 {{- include "tomcat.imagePullSecrets" . | indent 6 }}
